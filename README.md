@@ -3,16 +3,16 @@
 This project demonstrates the encryption and decryption of a 128-bit message using the AES algorithm on two Basys3 FPGA boards. The input message is taken from a keyboard connected to the first Basys3 board, encrypted using AES, and then transmitted to the second Basys3 board using UART communication protocol. The second board performs the decryption and displays the original message on a VGA screen.
 
 ## Prerequisites
-Two Basys3 FPGA boards
-Vivado Design Suite (version X or later)
-Keyboard (compatible with Basys3 board)
-VGA monitor (compatible with Basys3 board)
+Two Basys3 FPGA boards  
+Vivado Design Suite (version 2020.1 or later)  
+Keyboard (compatible with Basys3 board)  
+VGA monitor (compatible with Basys3 board)  
 
 ## Hardware Setup
-1.Connect the first Basys3 board to your computer.
-2.Connect the keyboard to the appropriate input port on the first Basys3 board.
-3.Connect the second Basys3 board to your computer.
-4.Connect the VGA monitor to the appropriate output port on the second Basys3 board.
+1.Connect the first Basys3 board to your computer.  
+2.Connect the keyboard to the appropriate input port on the first Basys3 board.  
+3.Connect the second Basys3 board to your computer.  
+4.Connect the VGA monitor to the appropriate output port on the second Basys3 board.  
 
 ## Software Setup
 1.Install Vivado Design Suite on your computer.
