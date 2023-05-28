@@ -26,7 +26,7 @@ ARCHITECTURE Behavioral OF UART_controller IS
             button_out : OUT STD_LOGIC
         );
     END COMPONENT;
-    COMPONENT TOP
+    COMPONENT UART
         PORT (
             clk : IN STD_LOGIC;
 
@@ -53,7 +53,7 @@ BEGIN
         button_out => button_pressed
     );
 
-    UART_transceiver : TOP
+    UART_transceiver : UART
     PORT MAP(
         clk => clk,
         enable => button_pressed,
