@@ -32,7 +32,7 @@ ENTITY ps2_keyboard_to_ascii IS
     ps2_clk : IN STD_LOGIC; --clock signal from PS2 keyboard
     ps2_data : IN STD_LOGIC; --data signal from PS2 keyboard
     ascii_new : OUT STD_LOGIC; --output flag indicating new ASCII value
-    ascii_code : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)); --ASCII value
+    ascii_code : OUT STD_LOGIC_VECTOR(127 DOWNTO 0)); --ASCII value
 END ps2_keyboard_to_ascii;
 
 ARCHITECTURE behavior OF ps2_keyboard_to_ascii IS
@@ -49,6 +49,9 @@ ARCHITECTURE behavior OF ps2_keyboard_to_ascii IS
   SIGNAL shift_r : STD_LOGIC := '0'; --'1' if right shift is held down, else '0'
   SIGNAL shift_l : STD_LOGIC := '0'; --'1' if left shift is held down, else '0'
   SIGNAL ascii : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"FF"; --internal value of ASCII translation
+  SHARED VARIABLE input_COUNTER : integer:=0 ;  
+  SIGNAL ps2_CONCAT : STD_LOGIC_VECTOR (127 downto 0) := X"32323232323232323232323232323247";
+  
 
   --declare PS2 keyboard interface component
   COMPONENT ps2_keyboard IS
@@ -305,12 +308,18 @@ BEGIN
         WHEN output =>
           IF (ascii(7) = '0') THEN --the PS2 code has an ASCII output
             ascii_new <= '1'; --set flag indicating new ASCII output
-            ascii_code <= ascii(6 DOWNTO 0); --output the ASCII value
+            IF (input_COUNTER <= 15)then
+                ps2_CONCAT <= ascii(7 downto 0)& ps2_CONCAT(127 downto 8) ;  
+                input_COUNTER := input_COUNTER +1;
+            else 
+                  
+            end if ;
+            
           END IF;
           state <= ready; --return to ready state to await next PS2 code
 
       END CASE;
     END IF;
   END PROCESS;
-
+ ascii_code <= ps2_CONCAT;
 END behavior;

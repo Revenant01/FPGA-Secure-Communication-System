@@ -8,13 +8,9 @@ ENTITY UART_controller IS
         clk : IN STD_LOGIC;
         tx_enable : IN STD_LOGIC;
 
-        data_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-        data_out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+        data_in : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
 
-        RX : IN STD_LOGIC;
-        TX : OUT STD_LOGIC;
-        
-        done : OUT STD_LOGIC
+        TX : OUT STD_LOGIC
     );
 END UART_controller;
 ARCHITECTURE Behavioral OF UART_controller IS
@@ -26,19 +22,12 @@ ARCHITECTURE Behavioral OF UART_controller IS
             button_out : OUT STD_LOGIC
         );
     END COMPONENT;
-    COMPONENT UART
+    COMPONENT UART_TX3
         PORT (
-            clk : IN STD_LOGIC;
-
-        data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-        data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-
-        enable : IN STD_LOGIC;
-
-        RX : IN STD_LOGIC;
-        TX : OUT STD_LOGIC;
-
-        done : OUT STD_LOGIC
+             clk : IN STD_LOGIC; -- 100 MHz  
+        enable : IN STD_LOGIC; -- enable transmission 
+        data_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0); -- data to be transmitted 
+        TX : OUT STD_LOGIC -- serial output
         );
     END COMPONENT;
 
@@ -53,15 +42,12 @@ BEGIN
         button_out => button_pressed
     );
 
-    UART_transceiver : UART
+    UART_transceiver : UART_TX3
     PORT MAP(
         clk => clk,
         enable => button_pressed,
         data_in => data_in,
-        data_out => data_out,
-        RX => RX,
-        TX => TX, 
-        done => done
+        TX => TX
     );
 
 END Behavioral;
