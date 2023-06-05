@@ -1,0 +1,16 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/addkey.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'addkey'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/finalRound.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'finalRound'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/mainRound.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mainRound'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/mixcolumn.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mixcolumn'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/sbox.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sbox'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/shiftrow.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'shiftrow'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/subbyte.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'subbyte'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/project_A/project_A/project_A.srcs/sources_1/new/encryption.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'encryption'

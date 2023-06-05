@@ -1,0 +1,40 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b53ca7cb31c84d31b1e7e17c62d202a6 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot encryption_behav xil_defaultlib.encryption -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=1407)\]
+Compiling architecture behavioral of entity xil_defaultlib.sbox [sbox_default]
+Compiling architecture behavioral of entity xil_defaultlib.subbyte [subbyte_default]
+Compiling architecture behavioral of entity xil_defaultlib.shiftrow [shiftrow_default]
+Compiling architecture behavioral of entity xil_defaultlib.mixcolumn [mixcolumn_default]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=1279)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=1279)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=1151)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=1151)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=1023)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=1023)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=895)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=895)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=767)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=767)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=639)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=639)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=511)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=511)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=383)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=383)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=255)\]
+Compiling architecture behavioral of entity xil_defaultlib.mainRound [\mainRound(index=255)\]
+Compiling architecture behavioral of entity xil_defaultlib.addkey [\addkey(index=127)\]
+Compiling architecture behavioral of entity xil_defaultlib.finalRound [finalround_default]
+Compiling architecture behavioral of entity xil_defaultlib.encryption
+Built simulation snapshot encryption_behav

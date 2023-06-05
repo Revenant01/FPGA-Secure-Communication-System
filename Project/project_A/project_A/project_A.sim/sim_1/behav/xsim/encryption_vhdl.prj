@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_A.srcs/sources_1/new/addkey.vhd" \
+"../../../../project_A.srcs/sources_1/new/finalRound.vhd" \
+"../../../../project_A.srcs/sources_1/new/mainRound.vhd" \
+"../../../../project_A.srcs/sources_1/new/mixcolumn.vhd" \
+"../../../../project_A.srcs/sources_1/new/sbox.vhd" \
+"../../../../project_A.srcs/sources_1/new/shiftrow.vhd" \
+"../../../../project_A.srcs/sources_1/new/subbyte.vhd" \
+"../../../../project_A.srcs/sources_1/new/encryption.vhd" \
+
+# Do not sort compile order
+nosort
