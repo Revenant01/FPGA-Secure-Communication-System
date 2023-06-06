@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue May 30 10:19:21 2023
+# Process ID: 13324
+# Current directory: C:/Users/shoro/Desktop/project_b/project_b.runs/synth_1
+# Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+# Log file: C:/Users/shoro/Desktop/project_b/project_b.runs/synth_1/TOP.vds
+# Journal file: C:/Users/shoro/Desktop/project_b/project_b.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TOP.tcl -notrace

@@ -1,0 +1,214 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue May 30 10:22:14 2023
+| Host         : LAPTOP-PC148O2D running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TOP_control_sets_placed.rpt
+| Design       : TOP
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   136 |
+|    Minimum number of control sets                        |   136 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   935 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   136 |
+| >= 0 to < 4        |   131 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            2 |
+| No           | No                    | Yes                    |              46 |           20 |
+| No           | Yes                   | No                     |               1 |            1 |
+| Yes          | No                    | No                     |             149 |          136 |
+| Yes          | No                    | Yes                    |              10 |            3 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+-----------------------------+--------------------+------------------+----------------+--------------+
+|        Clock Signal       |        Enable Signal        |  Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------+-----------------------------+--------------------+------------------+----------------+--------------+
+|  display1/CD/tmp          |                             |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[56]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[60]        |                    |                1 |              1 |         1.00 |
+|  display1/textElement1/d1 |                             | display1/Video_Out |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[63]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[68]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[62]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[69]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[106]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[108]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[124]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[118]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[76]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[94]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[121]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[95]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[99]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[114]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[109]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[120]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[113]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[96]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[116]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[110]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[100]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[117]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[123]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[83]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[103]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[78]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[89]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[102]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[92]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[122]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[105]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[98]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[86]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[87]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[84]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[85]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[126]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[97]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[115]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[88]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[90]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[82]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[119]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[111]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[77]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[79]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[80]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[81]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[107]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[125]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[127]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[112]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[91]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[93]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[101]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[104]       |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[2]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[11]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[30]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[3]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[34]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[39]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[45]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[28]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[43]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[46]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[48]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[49]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[50]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[16]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[51]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[0]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[6]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[20]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[26]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[33]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[8]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[24]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[27]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[7]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[40]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[47]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[53]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[42]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[21]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[52]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[54]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[17]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[23]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[41]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[5]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[25]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[44]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[14]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[4]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[10]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[22]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[31]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[18]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[29]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[35]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[1]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[12]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[15]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[32]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[37]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[13]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[36]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[38]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[19]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[9]         |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[72]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[73]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[58]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[74]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[75]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[59]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[61]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[64]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[65]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[57]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[55]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[66]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[70]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[71]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | reciever/DataReg[67]        |                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            |                             |                    |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG            | reciever/data_index_counter |                    |                3 |              7 |         2.33 |
+|  display1/CD/tmp          | display1/v                  | reset_IBUF         |                3 |             10 |         3.33 |
+|  display1/CD/tmp          |                             | reset_IBUF         |                5 |             13 |         2.60 |
+|  clk_IBUF_BUFG            | reciever/clk_count_0        |                    |                5 |             14 |         2.80 |
+|  clk_IBUF_BUFG            |                             | reset_IBUF         |               15 |             33 |         2.20 |
++---------------------------+-----------------------------+--------------------+------------------+----------------+--------------+
+
+
