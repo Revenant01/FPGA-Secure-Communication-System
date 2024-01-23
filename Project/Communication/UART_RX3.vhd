@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 ENTITY UART_RX3 IS
     GENERIC (
-        BAUD_RATE : INTEGER := 10416
+        BAUD_RATE : INTEGER := 20833
     );
 
     PORT (

@@ -24,12 +24,13 @@ ENTITY UART_TX3 IS
 
     GENERIC (
         BAUD_RATE : INTEGER := 10416 -- 9600 baud @ 100 MHz (100 000 000 / 9600 = 10416.6667)
+        DATA_WIDTH : INTEGER := 127
     );
 
     PORT (
         clk : IN STD_LOGIC; -- 100 MHz  
         enable : IN STD_LOGIC; -- enable transmission 
-        data_in : IN STD_LOGIC_VECTOR(127 DOWNTO 0); -- data to be transmitted 
+        data_in : IN STD_LOGIC_VECTOR(DATA_WIDTH DOWNTO 0); -- data to be transmitted 
         TX : OUT STD_LOGIC -- serial output 
     );
 END UART_TX3;
@@ -43,10 +44,10 @@ ARCHITECTURE RTL OF UART_TX3 IS
     SIGNAL state : Tx_state := IDLE;
 
     -- The bit counter 
-    SIGNAL data_Index : INTEGER RANGE 0 TO 127 := 0;
+    SIGNAL data_Index : INTEGER RANGE 0 TO DATA_WIDTH := 0;
 
     -- The register that holds the data to be transmitted  
-    SIGNAL dataReg : STD_LOGIC_VECTOR(127 DOWNTO 0) := (OTHERS => '0');
+    SIGNAL dataReg : STD_LOGIC_VECTOR(DATA_WIDTH DOWNTO 0) := (OTHERS => '0');
 
     -- baud rate counter
     SIGNAL Clk_Count : INTEGER RANGE 0 TO BAUD_RATE - 1 := 0;
@@ -82,7 +83,7 @@ BEGIN
                     ELSE
                         clk_Count <= 0;
 
-                        IF (data_Index = 127) THEN
+                        IF (data_Index = DATA_WIDTH) THEN
                             state <= STOP;
                         ELSE
                             data_Index <= data_Index + 1;
@@ -103,3 +104,4 @@ BEGIN
     END PROCESS;
 
 END ARCHITECTURE RTL;
+
